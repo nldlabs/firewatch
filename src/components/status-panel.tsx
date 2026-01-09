@@ -32,7 +32,7 @@ export function StatusPanel({
   const compactView = (
     <button
       onClick={() => setIsExpanded(true)}
-      className="md:hidden bg-card/95 backdrop-blur-sm rounded-xl border border-border px-4 py-3 shadow-lg flex items-center gap-3"
+      className="bg-card/95 backdrop-blur-sm rounded-xl border border-border px-4 py-3 shadow-lg flex items-center gap-3"
     >
       <div className="flex items-center gap-2">
         {totalWarnings > 0 && (
@@ -61,7 +61,7 @@ export function StatusPanel({
       {/* Mobile close button */}
       <button
         onClick={() => setIsExpanded(false)}
-        className="md:hidden absolute top-2 right-2 text-muted-foreground hover:text-foreground p-1"
+        className="absolute top-2 right-2 text-muted-foreground hover:text-foreground p-1"
       >
         ×
       </button>
@@ -158,10 +158,10 @@ export function StatusPanel({
   return (
     <div className="absolute bottom-4 right-4 z-[1000]">
       {/* Show compact on mobile when collapsed, expanded view when expanded or on desktop */}
-      <div className={isExpanded ? 'hidden' : 'block md:hidden'}>
+      <div className={isExpanded ? 'hidden' : 'block'}>
         {compactView}
       </div>
-      <div className={isExpanded ? 'block relative' : 'hidden md:block'}>
+      <div className={isExpanded ? 'block relative' : 'hidden'}>
         {expandedView}
       </div>
     </div>

@@ -10,7 +10,6 @@ import { DisclaimerDialog } from "./components/disclaimer-dialog";
 import { AlertBanner } from "./components/alert-banner";
 import { UserLocationPanel } from "./components/user-location-panel";
 import { StatusPanel } from "./components/status-panel";
-import { MapLegend } from "./components/map-legend";
 
 function App() {
   const [selectedEvent, setSelectedEvent] = useState<EmergencyEvent | null>(null);

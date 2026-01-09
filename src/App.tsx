@@ -115,8 +115,6 @@ function App() {
           lastUpdated={lastUpdated}
         />
         
-        {/* Map Legend - Bottom Left */}
-        <MapLegend />
       </div>
     </ThemeProvider>
   );

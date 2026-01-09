@@ -33,12 +33,8 @@ jobs:
       - name: Compute BASE_PATH
         id: basepath
         run: |
-          repo="${GITHUB_REPOSITORY#*/}"
-          if [[ "$repo" == *.github.io ]]; then
-            echo "BASE_PATH=/" >> "$GITHUB_OUTPUT"
-          else
-            echo "BASE_PATH=/$repo/" >> "$GITHUB_OUTPUT"
-          fi
+          # Custom domain assumed ⇒ always use root base path
+          echo "BASE_PATH=/" >> "$GITHUB_OUTPUT"
 
       - name: Build
         env:
